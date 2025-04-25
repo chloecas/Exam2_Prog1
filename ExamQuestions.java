@@ -17,10 +17,13 @@ public class ExamQuestions
         //I have to define an ArrayList for question 26/27
         temperature = new ArrayList<>();
         temperature.add(38.5);
-        temperature.add(37.0);
+        temperature.add(37.5);
         temperature.add(39.1);
-        temperature.add(38.5);
+        temperature.add(35.5);
         temperature.add(36.5);
+        temperature.add(40.0);
+        
+        fever(temperature);
     }
 
     /**
@@ -39,10 +42,23 @@ public class ExamQuestions
     }
     
     /**
+     * Method needed to test answers to questions 
+     */
+    private void fever(ArrayList<Double> temperature)
+    {
+        int count = 0;
+        double max = 0;
+        
+        
+        System.out.println("Number of fever cases reported: " + count);
+        System.out.println("Highest fever casesreported: " + max);
+    }
+    
+    /**
      * Question 25
      *
      */
-    public void feverTemp(ArrayList temperature)
+    public void feverTempQ25()
     {
         for(double i = 0; i < temperature.size(); i++) {
             if(i > 37.5) {
@@ -50,13 +66,12 @@ public class ExamQuestions
             }
         }
         
-    
     }
     
     /**
      * Question 26
      */
-    public void feverTemp()
+    public void feverTempQ26()
     {
         System.out.println(Collections.max(temperature));
     }
@@ -64,7 +79,7 @@ public class ExamQuestions
     /**
      * Question 27
      */
-    public void feverTemp2()
+    public void feverTempQ27()
     {
         Collections.sort(temperature);
         System.out.println(Collections.max(temperature));
