@@ -1,4 +1,5 @@
-
+import java.util.ArrayList;
+import java.util.*;
 /**
  * Exam 2 questions 24- 27 fix.
  *
@@ -7,12 +8,19 @@
  */
 public class ExamQuestions
 {
+    private ArrayList<Double> temperature;
     /**
      * Constructor for objects of class ExamQuestions
      */
     public ExamQuestions()
     {
-    
+        //I have to define an ArrayList for question 24
+        temperature = new ArrayList<>();
+        temperature.add(38.5);
+        temperature.add(37.0);
+        temperature.add(39.1);
+        temperature.add(38.5);
+        temperature.add(36.5);
     }
 
     /**
@@ -37,16 +45,16 @@ public class ExamQuestions
      * Question 25
      *
      */
-    public void feverTemp(ArrayList<> temperature)
+    public void feverTemp(ArrayList temperature)
     {
-        for(double i = 0; i< temperature.length; i++) {
-            if(i> 37.5) {
+        for(double i = 0; i < temperature.size(); i++) {
+            if(i > 37.5) {
                 System.out.println(i);
             }
         }
         
         double max = 0;
-        while(i> max && < temperature.length) {
+        while(i > max) {
             System.out.println(max);
             max++;
         }
@@ -57,15 +65,15 @@ public class ExamQuestions
      */
     public void feverTemp()
     {
-        System.out.println(Collections.max(ArrayList<> temperature));
+        System.out.println(Collections.max(temperature));
     }
     
     /**
      * Question 27
      */
-    public void feverTemp()
+    public void feverTemp2()
     {
-        Collections.sort(ArrayList<> temperature));
-        System.out.println(temperature.max());
+        Collections.sort(temperature);
+        System.out.println(Collections.max(temperature));
     }
 }
