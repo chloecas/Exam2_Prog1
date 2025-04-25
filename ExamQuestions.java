@@ -42,31 +42,25 @@ public class ExamQuestions
     }
     
     /**
-     * Method needed to test answers to questions 
+     * Question 25 
      */
     private void fever(ArrayList<Double> temperature)
     {
         int count = 0;
         double max = 0;
         
-        
-        System.out.println("Number of fever cases reported: " + count);
-        System.out.println("Highest fever casesreported: " + max);
-    }
-    
-    /**
-     * Question 25
-     *
-     */
-    public void feverTempQ25()
-    {
-        for(double i = 0; i < temperature.size(); i++) {
-            if(i > 37.5) {
-                System.out.println(i);
+        for(Double temp : temperature) {
+            if(temp > 37.5) {
+                count++;
+            }
+            if(temp > max) {
+                max = temp;
             }
         }
-        
+        System.out.println("Number of fever cases reported: " + count);
+        System.out.println("Highest fever case reported: " + max);
     }
+
     
     /**
      * Question 26
@@ -82,6 +76,6 @@ public class ExamQuestions
     public void feverTempQ27()
     {
         Collections.sort(temperature);
-        System.out.println(Collections.max(temperature));
+        System.out.println(temperature.getLast());
     }
 }
