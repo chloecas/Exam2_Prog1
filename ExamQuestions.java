@@ -14,7 +14,7 @@ public class ExamQuestions
      */
     public ExamQuestions()
     {
-        //I have to define an ArrayList for question 24
+        //I have to define an ArrayList for question 26/27
         temperature = new ArrayList<>();
         temperature.add(38.5);
         temperature.add(37.0);
@@ -28,11 +28,8 @@ public class ExamQuestions
      */
     public void sampleMethod()
     {
-        String s1 = new String();
-        String s2 = new String();
         String s1 = "hello";
         String s2 = "goodbye";
-        
         if(s1.equals(s2)) {
             System.out.println("The strings are equal");
         }
@@ -53,11 +50,7 @@ public class ExamQuestions
             }
         }
         
-        double max = 0;
-        while(i > max) {
-            System.out.println(max);
-            max++;
-        }
+    
     }
     
     /**
